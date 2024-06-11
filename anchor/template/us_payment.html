@@ -1,0 +1,64 @@
+top:30px;"> VIEW BOOKINGS</h1>
+				<br><br><br><br>
+    <table border="2" align="center" class="table table-bordered" style="background-color:white; margin-left:50px; margin-right:50px;">
+    <thead>
+			<th>Guest Name</th>
+			<th>Contact no.</th>
+			<th>Email</th>
+			<th>Check-in</th>
+			<th>Check-out</th>
+<!--			<th>No. of rooms</th>-->
+			<th>Adults</th>
+<!--			<th>Children</th>-->
+			<th>Hotel Name</th>
+			<th>Room Category</th>
+<!--			<th>Check-in Date</th>-->
+<!--			<th>Check-out Date</th>-->
+			<th>Action</th>
+            <th>Status</th>
+			<th>Payment</th>
+
+	</thead>
+	<tbody>
+			{% for i in r %}
+
+			<td>{{i.name}}</td>
+			<td>{{i.ph}}</td>
+			<td>{{i.email}}</td>
+			<td>{{i.check_in}}</td>
+			<td>{{i.check_out}}</td>
+<!--			<td><img src="{{i.image.url}}" height="50px" width="50px"></td>-->
+<!--			<td>{{i.rooms}}</td>-->
+			<td>{{i.adults}}</td>
+<!--			<td>{{i.checkin_date}}</td>-->
+<!--			<td>{{i.checkout_date}}</td>-->
+<!--			<td>{{i.children}}</td>-->
+			<td>{{i.hotel_name}}</td>
+			<td>{{i.room_category}}</td>
+<!--			<td>{{i.username}}</td>-->
+			<td>{{i.action}}</td>
+            <td>{{i.status}}</td>
+			<td>
+			<form method="POST" action="payment">
+            {% csrf_token %}
+             	<input type="text" value="{{i.username}}" name="b1" hidden="">
+				<input type="text" value="{{i.name}}" name="b2" hidden="">
+				<input type="text" value="{{i.email}}" name="b3" hidden="">
+                <input type="text" value="{{i.hotel_name}}" name="b4" hidden="">
+                <input type="text" value="{{i.room_category}}" name="b5" hidden="">
+                <input type="submit" onclick="return confirm('Are You Sure')" value="Payment">
+
+         	</form>
+                <br>
+			<form method="POST" action="paycancel">
+			  {% csrf_token %}
+				 <input type="text" value="{{i.name}}" name="b2" hidden="">
+				<input type="text" value="{{i.status}}" name="b7" hidden="">
+				<input type="submit" onclick="return confirm('Are You Sure')" value="Cancel">
+			</form>
+			</td>
+
+
+    </tbody>
+			{% endfor %}
+    </table>

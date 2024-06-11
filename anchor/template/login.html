@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   <head>
+      <title> Sign up & login Form  </title>
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="Gaze Sign up & login Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+         />
+      <script>
+         addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
+      </script>
+      <!-- Meta tags -->
+      <!--stylesheets-->
+      <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+      <!--//style sheet end here-->
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+   <body>
+      <div class="mid-class">
+         <div class="art-right-w3ls">
+            <center>
+               <h2><b><span style="color:white">Log In Here</span></b></h2>
+            <form action="loginn" method="post">
+               {% csrf_token %}
+               <div class="main">
+                  <div class="form-left-to-w3l">
+                     <input type="text" name="n1" placeholder="Username" required="">
+                  </div>
+                  <div class="form-left-to-w3l ">
+                     <input type="password" id="pwd" name="n2"  placeholder="password" minlength="4"><br><br>
+                     <div class="clear"></div>
+                  </div>
+               </div>
+
+               <div class="right-side-forget">
+                  <a href="forgot" class="for"><span style="color:black">Forgot password...?</span></a>
+               </div>
+               <div class="clear"></div>
+               <div class="btnn">
+                  <button type="submit">Log In</button>
+               </div>
+            </form>
+            <div class="w3layouts_more-buttn">
+               <h3><span style="color:white">Don't Have an account..?</span><br>
+                  <a href="an_reg"><b><span style="color:white">sign up as Anchor...</span></b>
+                  </a><br>
+                  <a href="user_reg"><b><span style="color:white">sign up as user...</span></b>
+                  </a>
+               </h3>
+            </div>
+            </center>
+            <!-- popup-->
+<!--            <div id="content1" class="popup-effect">-->
+<!--               <div class="popup">-->
+<!--                  &lt;!&ndash;login form&ndash;&gt;-->
+<!--                  <div class="letter-w3ls">-->
+<!--                     <form action="#" method="post">-->
+<!--                        <div class="form-left-to-w3l">-->
+<!--                           <input type="text" name="name" placeholder="Username" required="">-->
+<!--                        </div>-->
+<!--                        <div class="form-left-to-w3l">-->
+<!--                           <input type="text" name="name" placeholder="Phone" required="">-->
+<!--                        </div>-->
+<!--                        <div class="form-left-to-w3l">-->
+<!--                           <input type="email" name="email" placeholder="Email" required="">-->
+<!--                        </div>-->
+<!--                        <div class="form-left-to-w3l">-->
+<!--                           <input type="password" name="password" placeholder="Password" required="">-->
+<!--                        </div>-->
+<!--                        <div class="form-left-to-w3l margin-zero">-->
+<!--                           <input type="password" name="password" placeholder="Confirm Password" required="">-->
+<!--                        </div>-->
+<!--                        <div class="btnn">-->
+<!--                           <button type="submit">Sign Up</button>-->
+<!--                           <br>-->
+<!--                        </div>-->
+<!--                     </form>-->
+<!--                     <div class="clear"></div>-->
+<!--                  </div>-->
+<!--                  &lt;!&ndash;//login form&ndash;&gt;-->
+<!--                  <a class="close" href="#">&times;</a>-->
+<!--               </div>-->
+<!--            </div>-->
+            <!-- //popup -->
+
+      <footer class="bottem-wthree-footer">
+
+      </footer>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+<title>Free Club Website Template | Home :: w3layouts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="{% static 'css-ga/style.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'js-ga/slider-styles.css' %}" type="text/css" media="all" />
+<link href='//fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+<script src="{% static 'js-ga/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js-ga/slider.js' %}"></script>
+
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+<!--	<div class="logo"><a href="index.html"><img src="{% static 'images-ga/logo.png' %}" alt="" /></a></div>-->
+    <div class="nav">
+        <ul>
+            <li><a href="../12">Home</a></li>
+<!--            <li><a href="single.html">Gallery</a></li>-->
+<!--            <li><a href="single.html">Studio</a></li>-->
+<!--            <li><a href="single.html">Login</a></li>-->
+<!--            <li><a href="anchor_reg.html">contact</a></li>-->
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+	<div class="main-body">
+    	<div id="slider">
+				<a href="gallery1" target="_blank">
+					{% for i in r %}
+<!--					<span>-->
+<!--						<b>Mini Ninjas</b><br />-->
+<!--						Your quest to defeat the Evil Samurai Warlord has begun. Control the, possess creatures, use your-->
+<!--						furious Ninja skills to free your Ninja friends.-->
+<!--					</span>-->
+				</a>
+<!--				<a href="#" target="_blank">-->
+<!--					<img src="{% static 'images-ga/img-0.jpg' %}" alt="Price of Persia" />-->
+<!--				</a>-->
+				<a href="#" target="_blank">
+					<<img src="{{i.photo.url}}" >
+				</a>
+			</div>
+			<div class="clear"></div>
+    	<div class="hr"></div>
+		<div class="grids">
+			<ul>
+			<li>
+				<<img src="{{i.photo2.url}}" >
+<!--				<div><h3>Lorem Ipsum is simply</h3>-->
+<!--				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit ame</p></div>-->
+<!--				<button><img src="{% static 'images-ga/arrow.png' %}" align="absmiddle" ></button>-->
+				<div class="clear"></div>
+			</li>
+			<li>
+				<<img src="{{i.photo5.url}}" >
+<!--				<div><h3>Lorem Ipsum is simply</h3>-->
+<!--				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit ame</p></div>-->
+<!--				<button><img src="{% static 'images-ga/arrow.png' %}" align="absmiddle" ></button>-->
+				<div class="clear"></div>
+			</li>
+			<li class="last">
+				<<img src="{{i.photo3.url}}" >
+<!--				<div><h3>Lorem Ipsum is simply</h3>-->
+<!--				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit ame</p></div>-->
+<!--				<button><img src="{% static 'images-ga/arrow.png' %}" align="absmiddle" ></button>-->
+				<div class="clear"></div>
+			</li>
+			<div class="clear"></div>
+			</ul>
+		</div>
+		<div class="clear"></div>
+<!--		<div class="text-box">-->
+<!--			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>-->
+<!--		</div>-->
+    
+	</div>
+	<div class="hr"></div>
+<!--<div class="footer">-->
+<!--        <ul><h3>Home</h3>-->
+<!--            <li><a href="index.html"></a></li>-->
+<!--            <li><a href="single.html">Proin sed nisi leo, ac aliquam</a></li>-->
+<!--            <li><a href="single.html">Ut id turpis ante, sit amet males</a></li>-->
+<!--            <li><a href="single.html">Aliquam quis urna varius ipsum phar</a></li>-->
+<!--            <li><a href="anchor_reg.html">Lorem ipsum dolor sit amet, consectetur</a></li>-->
+<!--        </ul>-->
+<!--        <ul><h3>Services</h3>-->
+<!--            <li><a href="index.html">Donec id ante id urna vehicula mollis</a></li>-->
+<!--            <li><a href="single.html">Aenean dignissim tellus sed quam </a></li>-->
+<!--            <li><a href="single.html">Mauris in mauris in erat auctor semper</a></li>-->
+<!--            <li><a href="single.html">Fusce tempus viverra turpis, vitae</a></li>-->
+<!--            <li><a href="anchor_reg.html">Vestibulum placerat massa et justo</a></li>-->
+<!--        </ul>-->
+<!--        <ul><h3>Feedback</h3>-->
+<!--            <li><a href="index.html">Home</a></li>-->
+<!--            <li><a href="single.html">About</a></li>-->
+<!--            <li><a href="single.html">Services</a></li>-->
+<!--            <li><a href="single.html">Login</a></li>-->
+<!--            <li><a href="anchor_reg.html">Contact</a></li>-->
+<!--        </ul>-->
+<!--        <div class="clear"></div>-->
+<!--</div>-->
+<!--    <div class="copy">-->
+<!--    <p>&copy; 2012 Club. All rights reserved | Design by <a href="http://w3layouts.com">W3Layouts</a></p>-->
+
+<!--    </div>-->
+	{% endfor %}
+    
+
+</div>
+
+		<script>
+			$('#slider').coinslider();
+		</script>
+
+</body>
+</html>

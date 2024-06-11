@@ -1,0 +1,136 @@
+<!--A Design by W3layouts
+   Author: W3layout
+   Author URL: http://w3layouts.com
+   License: Creative Commons Attribution 3.0 Unported
+   License URL: http://creativecommons.org/licenses/by/3.0/
+   -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+   <head>
+      <title>Sign up & login Form a Flat Responsive Widget Template :: w3layouts </title>
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content=" Sign up & login Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+         />
+      <script>
+         addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
+      </script>
+      <!-- Meta tags -->
+      <!--stylesheets-->
+      <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+      <!--//style sheet end here-->
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+   </head>
+   <body>
+      <center>
+       <div class="mid-class">
+         <div class="art-right-w3ls">
+            <h2>Sign In and Sign Up</h2>
+            <form action="emp-reg" method="post" enctype="multipart/form-data">
+               {% csrf_token %}
+               <div class="main">
+                  <div class="form-left-to-w3l">
+                     <input type="text" name="first_name" placeholder=" First Name" required="">
+                  </div>
+                  <div class="form-left-to-w3l">
+                     <input type="text" name="last_name" placeholder=" Last Name" required="">
+                  </div>
+                  <div class="form-left-to-w3l">
+                     <input type="text" name="address" placeholder="Address" required="">
+                  </div>
+                  <div class="form-left-to-w3l ">
+                     <input type="email" name="email" placeholder="Email" required="">
+                     <div class="clear"></div>
+                  </div>
+                  <div class="form-left-to-w3l">
+                     <input type="text" name="phone_no" pattern=".{10,}" placeholder="Phone number" required="">
+                </div>
+                  <div class="form-left-to-w3l">
+                     <input type="text" name="gender" placeholder="Gender" required="">
+                  </div>
+
+<!--                  <div class="form-left-to-w3l">-->
+<!--                     <input type="text" name="n14" placeholder="Account number" required="">-->
+<!--                  </div>-->
+<!--                  <div class="form-left-to-w3l">-->
+<!--                     <input type="file" name="pro_pic" placeholder="Profile photo" required="">-->
+<!--                  </div>-->
+<!--                  <div class="form-left-to-w3l">-->
+<!--                     <input type="file" name="n6" placeholder="Previous work" required="">-->
+<!--                  </div>-->
+<!--                  <div class="form-left-to-w3l">-->
+<!--                     <input type="file" name="n12" placeholder="Biodata" required="">-->
+<!--                  </div>-->
+                  <div class="form-left-to-w3l">
+                     <input type="text" name="location" placeholder="Location" required="">
+                  </div>
+<!--                  <div class="form-control">-->
+<!--                     <label class="header">About your job</label>-->
+<!--                     <textarea rows="6" cols="70" name="n15" placeholder="About your job"></textarea>-->
+<!--                  </div><br>-->
+
+                  <div class="form-left-to-w3l">-->
+                     <input type="text" name="username" placeholder="Username" required="">
+                  </div>
+                  <div class="form-left-to-w3l">-->
+                     <input type="text" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="password" required="">
+                  </div>
+
+               </div>
+               <div class="clear"></div>
+               <div class="btnn">
+                  <button type="submit">submit</button>
+               </div>
+            </form>
+            <div class="w3layouts_more-buttn">
+               <h3>Already have an account..?
+                  <a href="login">Log In Here
+                  </a>
+               </h3>
+            </div>
+            </center>
+            <!-- popup-->
+<!--            <div id="content1" class="popup-effect">-->
+<!--               <div class="popup">-->
+<!--                  &lt;!&ndash;login form&ndash;&gt;-->
+<!--                  <div class="letter-w3ls">-->
+<!--                     <form action="#" method="post">-->
+<!--                        <div class="form-left-to-w3l">-->
+<!--                           <input type="text" name="name" placeholder="Username" required="">-->
+<!--                        </div>-->
+<!--                        <div class="form-left-to-w3l">-->
+<!--                           <input type="text" name="phone_no" placeholder="Phone" required="">-->
+<!--                        </div>-->
+<!--                        <div class="form-left-to-w3l">-->
+<!--                           <input type="email" name="email" placeholder="Email" required="">-->
+<!--                        </div>-->
+<!--                        <div class="form-left-to-w3l">-->
+<!--                           <input type="password" name="password" placeholder="Password" required="">-->
+<!--                        </div>-->
+<!--                        <div class="form-left-to-w3l margin-zero">-->
+<!--                           <input type="password" name="password" placeholder="Confirm Password" required="">-->
+<!--                        </div>-->
+<!--                        <div class="btnn">-->
+<!--                           <button type="submit">Sign Up</button>-->
+<!--                           <br>-->
+<!--                        </div>-->
+<!--                     </form>-->
+<!--                     <div class="clear"></div>-->
+<!--                  </div>-->
+<!--                  &lt;!&ndash;//login form&ndash;&gt;-->
+<!--                  <a class="close" href="#">&times;</a>-->
+<!--               </div>-->
+<!--            </div>-->
+            <!-- //popup -->
+<!--            <h6 class="header-w3ls">-->
+<!--                sign up & login-->
+<!--            </h6>-->
+<!--         </div>-->
+<!--       </div>-->
+      <footer class="bottem-wthree-footer">
+
+      </footer>
+   </body>
+</html>

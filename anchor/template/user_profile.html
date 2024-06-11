@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="zxx" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    {% load static %}
+    <title>Asap Cab Auto Mobiles Category Bootstrap Responsive Template | Home :: W3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Asap Cab Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'profile/css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'profile/css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Khula:300,400,600,700,800" rel="stylesheet">
+    <!-- //Fonts -->
+
+    <!--   ___________________ASSESTS_________________________-->
+
+    <link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+
+<!--   ___________________ASSESTS_________________________-->
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.profile-card {
+  max-width: 600px;
+  margin: 50px auto;
+  background: linear-gradient(blue, grey, pink);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.profile-header {
+  padding: 40px;
+  text-align: center;
+}
+
+.profile-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-header img:hover {
+  transform: scale(1.1);
+}
+
+.profile-header h1 {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.profile-header p {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  padding: 30px;
+}
+
+.profile-info h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #34e89e;
+}
+
+.profile-info p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.profile-info .info-label {
+  font-weight: bold;
+}
+
+.profile-info .info-value {
+  color: #fff;
+}
+
+.profile-footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #34e89e;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.profile-footer a:hover {
+  background-color: #0f3443;
+
+}
+</style>
+</head>
+
+<body>
+
+
+    <!-- mian-content -->
+<div class="main-content" id="home">
+    <div class="navbar">
+      <a href="profile2" class="active" style="background-color:red;">Back</a>
+      <a href="login" class="active" style="background-color:red;">Logout</a>
+    </div>
+
+    <div class="profile-card" style="border-radius:30px;">
+      <div class="profile-header">
+        {% for i in r %}
+    <!--    <img src="{{i.hotel_image.url}}" height="100" width="150">-->
+    <!--    <img src="profile-pic.jpg" alt="User Profile Picture">-->
+        <h1>{{i.name}}</h1>
+        {% endfor %}
+    <!--    <p>Frontend Developer</p>-->
+      </div>
+      <div class="profile-info">
+    <!--    <h2>Profile Information</h2>-->
+        {% for i in r %}
+    <!--    <p><span class="info-label">Hotel Name:</span> <span class="info-value">{{i.hotel_name}}</span></p>-->
+        <p><span class="info-label">Name:</span> <span class="info-value">{{i.name}}</span></p>
+        <p><span class="info-label">address:</span> <span class="info-value"> {{i.address}} </span></p>
+        <p><span class="info-label">email:</span> <span class="info-value"> {{i.email}} </span></p>
+        <p><span class="info-label">Mobile Number:</span> <span class="info-value">{{i.phone_no}}</span></p>
+    <!--    <p><span class="info-label">Hotel Image:</span> <span class="info-value"><img src="{{i.hotel_image.url}}" height="100" width="150"></span></p>-->
+        <p><span class="info-label">location:</span> <span class="info-value">{{i.location}}</span></p>
+<!--        <p><span class="info-label">Username:</span> <span class="info-value"> {{i.username}} </span></p>-->
+
+      </div>
+
+      <div class="profile-footer">
+          <div class="row">
+              <div class="col-sm-6">
+                  <form method="POST" action="up_user1" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      <input type="text" value="{{i.username}}" name="n1" hidden="">
+                    <!--          <a href="#"><input type="submit" value="Edit Profile"></a>-->
+                      <button class="btn btn-style btn-danger mt-sm-4 mt-3" type="submit">Edit Profile</button>
+                  </form>
+                    <!--    <a href="#">Edit Profile</a>-->
+              </div>
+
+              <div class="col-sm-6">
+                  <form method="POST" action="ch_uspass1">
+                        {% csrf_token %}
+                        <input type="text" value="{{i.username}}" name="u_id" hidden="">
+                    <!--            <a href="#"><input type="submit" value="Change"></a>-->
+<!--                        <button class="btn btn-style btn-danger mt-sm-4 mt-3" type="submit">Change Password</button>-->
+                  </form>
+                    <!--    <a href="#">Change Password</a>-->
+              </div>
+          </div>
+      </div>
+        <br>
+        {% endfor %}
+
+    </div>
+
+
+
+      <br><br>
+<!--        <br><br><br><br>  -->
+
+</div>
+</body>
+</html>

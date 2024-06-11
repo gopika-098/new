@@ -1,0 +1,36 @@
+.main-content {
+    background: url(../images/audiance.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+
+.navbar {
+  background-color: #335B96; /* Background color of the nav bar */
+  overflow: hidden; /* Ensures that content doesn't overflow */
+}
+
+.navbar a {
+  float: left; /* Aligns the links horizontally */
+  display: block; /* Makes the links block-level elements */
+  color: #fff; /* Text color of the links */
+  text-align: center; /* Centers the text horizontally */
+  padding: 14px 20px; /* Padding around each link */
+  text-decoration: none; /* Removes underline from links */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.navbar a:hover {
+  background-color: #ddd; /* Background color of links on hover */
+  color: #333; /* Text color of links on hover */
+}
+
+.navbar a.active {
+  background-color: #4CAF50; /* Background color of the active link */
+  color: white; /* Text color of the active link */
+}
+
+
+
+
+

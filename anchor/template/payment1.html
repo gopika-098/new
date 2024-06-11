@@ -1,0 +1,221 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<!-- Head -->
+<head>
+
+<title>Credit Card Validation Form A Flat Responsive Widget Template :: W3layouts</title>
+
+<!-- Meta-Tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="Credit Card Validation Form Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Meta-Tags -->
+
+<!-- Custom-Style-Sheet -->
+<link rel="stylesheet" href="{% static 'css-payment/bootstrap.css' %}"	type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css-payment/style.css' %}" 	type="text/css" media="all">
+<!-- //Custom-Style-Sheet -->
+
+<!-- Fonts -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" type="text/css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700"			   type="text/css" media="all">
+<!-- //Fonts -->
+
+<!-- Style -->
+<style type="text/css">
+
+	.wrap {
+		max-width: 980px;
+		margin: 10px auto 0;
+	}
+	#steps {
+		margin: 80px 0 0 0;
+	}
+	.commands {
+		overflow: hidden;
+		margin-top: 30px;
+	}
+	.prev {
+		float:left
+	}
+
+	.error {
+		color: #FFC107;
+	}
+	.next, .submit {
+		float:right
+
+	#progress {
+		position: relative;
+		height: 5px;
+		background-color: #eee;
+		margin-bottom: 50px;
+	}
+	#progress-complete {
+		border: 0;
+		position: absolute;
+		height: 5px;
+		min-width: 10px;
+		background-color: #F44336;
+		transition: width .2s ease-in-out;
+	}
+
+	@media screen and (max-width: 966px) {
+		#progress {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media screen and (max-width: 320px) {
+		#progress {
+			margin-bottom: 20px;
+		}
+	}
+
+</style>
+<!-- //Style -->
+
+</head>
+<!-- //Head -->
+
+
+
+	<!-- Body -->
+	<body>
+
+		<h1>Payment</h1>
+
+		<div class="containerw3layouts-agileits">
+
+			<div id='progress'><div id='progress-complete'></div></div>
+            {% for i in r %}
+			<form action="booking_confirm" method="post" class="creditly-card-form agileinfo_form">
+				{% csrf_token %}
+
+
+				<fieldset>
+					<legend>Account Details :</legend>
+					<div class="form-group agileinfo">
+						<label for="Name">Name</label>
+						<input  id="Name" disabled value="{{i.username}}" name="b1" type="text" class="form-control" placeholder="NAME" required>
+					</div>
+					<div class="form-group agileinfo">
+						<label for="Name">Address</label>
+						<input id="ADDRESS" disabled value="{{i.ADDRESS}}" name="b3" type="text" class="form-control" placeholder="ADDRESS" required>
+					</div>
+					<div class="form-group agileinfo">
+						<label for="Name">PHONE</label>
+						<input id="PHONE" disabled value="{{i.PHONE}}" name="b2" type="text" class="form-control" placeholder="PHONE" required>
+					</div>
+
+					<div class="form-group">
+						<label for="Email">EMAIL</label>
+						<input id="EMAIL" disabled value="{{i.EMAIL}}" name="b4" type="email" class="form-control" placeholder="Email" required>
+					</div>
+<!--					<div class="form-group">-->
+<!--						<label for="name">DATE</label>-->
+<!--						<input id="DATE" disabled value="{{i.DATE}}" name="b5" type="Date" class="form-control" placeholder="DATE" required>-->
+<!--					</div>-->
+					<div class="form-group">
+						<label for="Name">Anchor</label>
+						<input id="ANCHOR" disabled value="{{i.ANCHOR}}" name="b6" type="password" class="form-control w3-agileits" placeholder="ANCHOR" required="">
+					</div>
+
+				</fieldset>
+
+
+<!--				<fieldset>-->
+<!--					<legend>Company Details</legend>-->
+<!--					<div class="form-group wthree">-->
+<!--						<label for="username">Name</label>-->
+<!--						<input id="username" value="{{i.username}}" name="b1" type="text" class="form-control" placeholder="Name" readonly>-->
+<!--					</div>-->
+<!--					<div class="form-group wthree">-->
+<!--						<label for="ADDRESS">ADDRESS</label>-->
+<!--						<input id="ADDRES" value="{{i.ADDRESS}}" name="b3" type="text" class="form-control" placeholder="ADDRESS" readonly>-->
+<!--					</div>-->
+<!--					<div class="form-group wthree">-->
+<!--						<label for="EMAIL">EMAIL</label>-->
+<!--						<input id="EMAILL" value="{{i.EMAIL}}" name="b4" type="text" class="form-control" placeholder="EMAIL" readonly>-->
+<!--					</div>-->
+<!--					<div class="form-group wthree">-->
+<!--						<label for="PHONE">PHONE</label>-->
+<!--						<input id="PHONENUMBER" value="{{i.PHONE}}" name="b2" type="text" class="form-control" placeholder="PHONE" readonly>-->
+<!--					</div>-->
+<!--					<div class="form-group wthree">-->
+<!--						<label for="ANCHOR">ANCHOR</label>-->
+<!--						<input id="ANCHORR" value="{{i.ANCHOR}}" name="b6" type="text" class="form-control" placeholder="ANCHOR" readonly>-->
+<!--					</div>-->
+<!--					<div class="form-group wthree">-->
+<!--						<label for="PAYMENT">PAYMENT</label>-->
+<!--						<input id="PAYMENT" value="{{i.PAYMENT}}" name="b7" type="text" class="form-control" placeholder="PAYMENT" readonly>-->
+<!--					</div>-->
+<!--				</fieldset>-->
+				
+
+				<p>
+					<button id="SaveAccount" class="btn wthree btn-primary submit">SUBMIT</button>
+				</p>
+
+			</form>
+        {% endfor %}
+		</div>
+
+		<div class="w3lsfooteragileits">
+			<p> &copy; 2017 Credit Card Validation Form. All Rights Reserved | Design by <a href="http://w3layouts.com" target="=_blank">W3layouts</a></p>
+		</div>
+
+
+
+		<!-- Necessary-JavaScript-Files-&-Links -->
+
+			<!-- Default-JavaScript --><script type="text/javascript" src="{% static 'js-payment/jquery.min.js' %}"></script>
+			<script src="{% static 'js-payment/jquery.validate.min.js' %}"></script>
+			<script src="{% static 'js-payment/jquery.formtowizard.js' %}"></script>
+			<script>
+				$( function() {
+					var $signupForm = $( '#SignupForm' );
+					$signupForm.validate({errorElement: 'em'});
+					$signupForm.formToWizard({
+						submitButton: 'SaveAccount',
+						nextBtnClass: 'btn btn-primary next',
+						prevBtnClass: 'btn btn-default prev',
+						buttonTag:    'button',
+						validateBeforeNext: function(form, step) {
+							var stepIsValid = true;
+							var validator = form.validate();
+							$(':input', step).each( function(index) {
+								var xy = validator.element(this);
+								stepIsValid = stepIsValid && (typeof xy == 'undefined' || xy);
+							});
+							return stepIsValid;
+						},
+						progress: function (i, count) {
+							$('#progress-complete').width(''+(i/count*100)+'%');
+						}
+					});
+				});
+			</script>
+
+		<!-- //Necessary-JavaScript-Files-&-Links -->
+
+
+
+	</body>
+	<!-- //Body -->
+
+
+
+</html>

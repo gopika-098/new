@@ -1,0 +1,130 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 {% load static %}
+<title>update hotel profile</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Auditions Registration Form Widget Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!-- //custom-theme -->
+<link href="{% static 'user profile update/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="{% static 'user profile update/js/jquery-2.1.4.min.js' %}"></script>
+<!-- //js -->
+<!-- font-awesome-icons -->
+<!-- //font-awesome-icons -->
+<link href="//fonts.googleapis.com/css?family=Antonsubset=latin-ext,vietnamese" rel="stylesheet">
+
+
+
+	<!--		BUTTON BOOTSTRAP CODE-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!--		BUTTON BOOTSTRAP CODE-->
+
+
+</head>
+<body>
+<!-- banner -->
+	<div class="center-container">
+	<div class="banner-dott">
+		<div class="main">
+			<h1 class="w3layouts_head">UPDATE USER PROFILE</h1>
+				<div class="w3layouts_main_grid">
+
+					<form action="us_update2" method="post" class="w3_form_post">
+    					{% csrf_token %}
+						{% for i in r %}
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label> FIRST NAME </label>
+								<input type="text" name="n1" placeholder="First Name" value={{i.name}} required="">
+							</span>
+						</div>
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label> Address </label>
+								<input type="text" name="n2" placeholder="Address" value={{i.address}} required="">
+							</span>
+						</div>
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label> MOBILE NUMBER </label>
+								<input type="number" name="n3" placeholder="Mobile Number" value={{i.phone_no}} required="">
+							</span>
+						</div>
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label> EMAIL ADDRESS </label>
+								<input type="text" name="n4" placeholder="email address" value={{i.email}} required="">
+								</span>
+						</div>
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+<!--								<label> USERNAME </label>-->
+								<input type="text" name="n5" placeholder="location" value={{i.location}} hidden="">
+								</span>
+						</div>
+
+
+
+						<div class="w3_main_grid">
+							<div class="w3_main_grid_right">
+								<input type="submit" value="Update">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--							<button type="button" class="btn btn-light btn-lg"> <a href="u_profile">BACK</a></button>-->
+								<button type="button" class="btn btn-light"> <a href="profile2">BACK</a></button>
+
+							</div>
+						</div>
+						{% endfor %}
+
+					</form>
+				</div>
+		<!-- Calendar -->
+			<link rel="stylesheet" href="{% static 'user profile update/css/jquery-ui.css' %}" />
+				<script src="{% static 'user profile update/js/jquery-ui.js' %}"></script>
+					<script>
+						$(function() {
+							$( "#datepicker" ).datepicker();
+						});
+					</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
